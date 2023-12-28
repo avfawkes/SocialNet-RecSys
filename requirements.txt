@@ -4,3 +4,4 @@ catboost==1.0.6
 pandas==1.5.3
 loguru==0.7.0
 uvicorn==0.22.0
+yaml==6.0
