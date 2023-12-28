@@ -1,4 +1,5 @@
 fastapi==0.100.0
+psycopg2==2.9.5
 sqlalchemy==1.4.27
 catboost==1.0.6
 pandas==1.5.3

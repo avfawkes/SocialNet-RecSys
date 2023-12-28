@@ -11,10 +11,10 @@ services:
       - ./app:/app
 
     healthcheck:
-      test: curl --fail http://localhost:5000//healthcheck || exit 1
-      interval: 1m
+      test: curl --fail http://localhost:5000/healthcheck || exit 1
+      interval: 1h
       timeout: 20s
       retries: 2
-      start_period: 2m
+      start_period: 3m
 
     restart: always
