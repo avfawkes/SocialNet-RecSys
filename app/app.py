@@ -1,6 +1,7 @@
 import os
 from typing import List
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
 from schema import PostGet, Response
 from datetime import datetime
 import sqlalchemy
@@ -13,6 +14,7 @@ import json
 import yaml
 import hashlib
 import warnings
+from pathlib import Path
 
 warnings.filterwarnings("ignore")
 app = FastAPI()
@@ -122,6 +124,19 @@ def healthcheck():
         return {'status': 'ok'}
     logger.error('Some dataframe or model error on healthcheck!')
     raise HTTPException(status_code=500, detail='Something gone wrong')
+
+
+@app.get("/download/{file_name}", summary="download 'user_data', 'post_text_df', 'feed_data'")
+async def get_user_data(file_name: str):
+    """Download endpoint for 'user_data', 'post_text_df', 'feed_data'"""
+    if file_name not in ['user_data', 'post_text_df', 'feed_data']:
+        return {"status": "only 'user_data', 'post_text_df' or 'feed_data' allowed for download"}
+    path = Path.cwd().parent/'bd'/f'{file_name}.csv'
+    if path.is_file():
+        headers = {"Content-Disposition": "attachment; filename=user_data.csv"}
+        return FileResponse(path, media_type="application/csv", headers=headers)
+    else:
+        return {"status": "file doesn't exist"}
 
 
 if __name__ == "__main__":
