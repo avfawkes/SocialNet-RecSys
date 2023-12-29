@@ -9,6 +9,7 @@ services:
       - "5000:5000"
     volumes:
       - ./app:/app
+      - ./bd:/bd
 
     healthcheck:
       test: curl --fail http://localhost:5000/healthcheck || exit 1
