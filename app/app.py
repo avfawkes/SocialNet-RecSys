@@ -133,7 +133,7 @@ async def get_user_data(file_name: str):
         return {"status": "only 'user_data', 'post_text_df' or 'feed_data' allowed for download"}
     path = Path.cwd().parent/'bd'/f'{file_name}.csv'
     if path.is_file():
-        headers = {"Content-Disposition": "attachment; filename=user_data.csv"}
+        headers = {"Content-Disposition": f"attachment; filename={file_name}.csv"}
         return FileResponse(path, media_type="application/csv", headers=headers)
     else:
         return {"status": "file doesn't exist"}
