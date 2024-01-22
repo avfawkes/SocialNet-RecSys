@@ -12,7 +12,7 @@
  - [train](https://github.com/avfawkes/SocialNet-RecSys/tree/main/train) - ноутбук обучения модели. Также можно посмотреть на [Kaggle](https://www.kaggle.com/avfawkes/socialnet-recsys)
 
 ## Try it
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=http%3A%2F%2Fars.fvds.ru%3A5000%2Fhealthcheck&query=%24.status&style=for-the-badge&logo=fastapi&label=Service%20Healtcheck&link=http%3A%2F%2Fars.fvds.ru%3A5000%2Fhealthcheck&link=http%3A%2F%2Fars.fvds.ru%3A5000%2Fhealthcheck)  
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=http%3A%2F%2Fars.fvds.ru%3A5000%2Fhealthcheck&query=%24.status&style=for-the-badge&logo=fastapi&label=Service%20Healthcheck&link=http%3A%2F%2Fars.fvds.ru%3A5000%2Fhealthcheck&link=http%3A%2F%2Fars.fvds.ru%3A5000%2Fhealthcheck)  
 Попробовать сервис можно здесь [Service API](http://ars.fvds.ru:5000/docs)
 
 ## Data download endpoints
