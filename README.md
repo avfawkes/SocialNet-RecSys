@@ -21,6 +21,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-white?logo=fastapi)
 -->
 ![Python](https://img.shields.io/badge/Python-%233f7daf?logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-%23f37726?logo=jupyter&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-%23150458?logo=pandas&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-blue?logo=SQLAlchemy&logoColor=white&color=%23d71f00)
 ![CatBoost](https://img.shields.io/badge/CatBoost-%23ffcc00)
